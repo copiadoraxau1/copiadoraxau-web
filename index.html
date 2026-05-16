@@ -1,124 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Copiadora XAU | Publicidad y registro</title>
-  <meta name="description" content="Plataforma de publicidad y registro para Copiadora XAU." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Copiadora XAU</title>
+  <meta name="description" content="Plataforma profesional de copy trading para XAUUSD." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <div class="brand-mark">X</div>
-      <div>
-        <div class="brand-kicker">Plataforma oficial</div>
-        <h1>Copiadora XAU</h1>
+
+<a class="whatsapp-float" href="https://wa.me/573108558080" target="_blank">WhatsApp</a>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">X</div>
+    <div>
+      <div class="brand-kicker">Plataforma oficial</div>
+      <h1>Copiadora XAU</h1>
+    </div>
+  </div>
+
+  <a class="btn btn-primary" href="https://wa.me/573108558080" target="_blank">
+    Contactar por WhatsApp
+  </a>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="pill">Copy Trading · XAUUSD · Automatización</span>
+
+      <h2>Conecta tu cuenta y copia operaciones automáticamente</h2>
+
+      <p>
+        Sistema profesional de copy trading para XAUUSD con ejecución automatizada,
+        gestión optimizada y soporte personalizado vía WhatsApp.
+      </p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="https://wa.me/573108558080" target="_blank">
+          Ir a WhatsApp
+        </a>
+
+        <a class="btn btn-secondary" href="#registro">
+          Solicitar acceso
+        </a>
+      </div>
+
+      <div class="mini-grid">
+        <article>
+          <h3>Ejecución automática</h3>
+          <p>Las operaciones se copian directamente en tu cuenta.</p>
+        </article>
+
+        <article>
+          <h3>Gestión optimizada</h3>
+          <p>Configuración enfocada en estabilidad y control de riesgo.</p>
+        </article>
+
+        <article>
+          <h3>Soporte directo</h3>
+          <p>Atención personalizada vía WhatsApp para clientes activos.</p>
+        </article>
       </div>
     </div>
-    <a class="btn btn-primary" id="cta-whatsapp-top" href="#" target="_blank" rel="noreferrer">WhatsApp</a>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <span class="pill">Publicidad + registro + contacto</span>
-        <h2>Convierte visitas en clientes para tu copiadora.</h2>
-        <p>
-          Una página profesional para mostrar tu bot, explicar el servicio y captar registros desde cualquier celular o computador.
-        </p>
-        <div class="actions">
-          <a class="btn btn-primary" id="cta-whatsapp" href="#" target="_blank" rel="noreferrer">Ir a WhatsApp</a>
-          <a class="btn btn-secondary" href="#registro">Registrarme</a>
-        </div>
-        <div class="mini-grid">
-          <article>
-            <h3>Publicidad clara</h3>
-            <p>Presentación moderna y directa para que el cliente entienda el servicio.</p>
-          </article>
-          <article>
-            <h3>Registro simple</h3>
-            <p>Formulario listo para captar nombre, contacto y capital disponible.</p>
-          </article>
-          <article>
-            <h3>Diseño profesional</h3>
-            <p>Se ve bien en móvil y escritorio con una imagen premium.</p>
-          </article>
-        </div>
-      </div>
+    <div class="hero-card">
+      <img
+        class="bot-image"
+        src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1200&q=80"
+        alt="Copy trading automatizado"
+      />
 
-      <div class="hero-card" id="registro">
+      <div class="card" id="registro">
         <div class="card-head">
           <div>
             <span class="eyebrow">Formulario de registro</span>
             <h3>Solicita acceso</h3>
           </div>
+
           <span class="status">Disponible 24/7</span>
         </div>
 
-        <form id="lead-form" class="form">
+        <form class="form">
           <div class="grid-2">
             <label>
               <span>Nombre completo</span>
-              <input name="nombre" type="text" placeholder="Tu nombre" required />
+              <input type="text" placeholder="Tu nombre" required />
             </label>
+
             <label>
               <span>WhatsApp</span>
-              <input name="whatsapp" type="tel" placeholder="Tu número" required />
+              <input type="text" placeholder="573108558080" required />
             </label>
           </div>
 
           <div class="grid-2">
             <label>
               <span>Correo electrónico</span>
-              <input name="email" type="email" placeholder="correo@ejemplo.com" required />
+              <input type="email" placeholder="correo@ejemplo.com" required />
             </label>
+
             <label>
               <span>Capital disponible</span>
-              <input name="capital" type="text" placeholder="$100, $500, etc." />
+              <input type="text" placeholder="$100, $500..." />
             </label>
           </div>
 
           <label>
             <span>Mensaje</span>
-            <textarea name="mensaje" rows="4" placeholder="Cuéntanos qué buscas..."></textarea>
+            <textarea rows="4" placeholder="Cuéntanos qué buscas..."></textarea>
           </label>
 
-          <button class="btn btn-primary btn-block" type="submit">Registrarme ahora</button>
-          <p class="form-note">* Este formulario muestra confirmación visual. Luego puedes conectarlo a WhatsApp, correo o base de datos.</p>
+          <button class="btn btn-primary btn-block" type="submit">
+            Registrarme ahora
+          </button>
+
+          <p class="form-note">
+            Completa el formulario y recibe acceso a la copiadora automática.
+          </p>
         </form>
-
-        <div class="success" id="success" hidden>
-          <div class="success-badge">✓</div>
-          <h3>Registro recibido</h3>
-          <p>Gracias por registrarte. Ya puedes conectar este formulario a tu backend o a WhatsApp.</p>
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
+</main>
 
-    <section class="info">
-      <article>
-        <h3>Cómo funciona</h3>
-        <ol>
-          <li>El cliente ve la publicidad del bot.</li>
-          <li>Llena el formulario de registro.</li>
-          <li>Tú lo contactas y validas su ingreso.</li>
-        </ol>
-      </article>
-      <article>
-        <h3>Lo que transmite</h3>
-        <p>Confianza, claridad y una imagen seria para tu marca.</p>
-        <div class="stars">★★★★★</div>
-        <blockquote>“La plataforma se ve profesional y hace fácil entender el servicio.”</blockquote>
-      </article>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>Copiadora XAU · Plataforma de publicidad y registro</p>
-    <p>Listo para publicar en Vercel o cualquier hosting estático.</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
