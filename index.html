@@ -12,122 +12,200 @@
 </head>
 <body>
 
-<a class="whatsapp-float" href="https://wa.me/573108558080" target="_blank">WhatsApp</a>
+  <a class="whatsapp-float" href="https://wa.me/573108558080" target="_blank" rel="noreferrer">WhatsApp</a>
 
-<header class="topbar">
-  <div class="brand">
-    <div class="brand-mark">X</div>
-    <div>
-      <div class="brand-kicker">Plataforma oficial</div>
-      <h1>Copiadora XAU</h1>
-    </div>
-  </div>
-
-  <a class="btn btn-primary" href="https://wa.me/573108558080" target="_blank">
-    Contactar por WhatsApp
-  </a>
-</header>
-
-<main class="container">
-  <section class="hero">
-    <div class="hero-copy">
-      <span class="pill">Copy Trading · XAUUSD · Automatización</span>
-
-      <h2>Conecta tu cuenta y copia operaciones automáticamente</h2>
-
-      <p>
-        Sistema profesional de copy trading para XAUUSD con ejecución automatizada,
-        gestión optimizada y soporte personalizado vía WhatsApp.
-      </p>
-
-      <div class="actions">
-        <a class="btn btn-primary" href="https://wa.me/573108558080" target="_blank">
-          Ir a WhatsApp
-        </a>
-
-        <a class="btn btn-secondary" href="#registro">
-          Solicitar acceso
-        </a>
-      </div>
-
-      <div class="mini-grid">
-        <article>
-          <h3>Ejecución automática</h3>
-          <p>Las operaciones se copian directamente en tu cuenta.</p>
-        </article>
-
-        <article>
-          <h3>Gestión optimizada</h3>
-          <p>Configuración enfocada en estabilidad y control de riesgo.</p>
-        </article>
-
-        <article>
-          <h3>Soporte directo</h3>
-          <p>Atención personalizada vía WhatsApp para clientes activos.</p>
-        </article>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">X</div>
+      <div>
+        <div class="brand-kicker">Plataforma oficial</div>
+        <h1>Copiadora XAU</h1>
       </div>
     </div>
 
-    <div class="hero-card">
-      <img
-        class="bot-image"
-        src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1200&q=80"
-        alt="Copy trading automatizado"
-      />
+    <a class="btn btn-primary" href="https://wa.me/573108558080" target="_blank" rel="noreferrer">
+      Contactar por WhatsApp
+    </a>
+  </header>
 
-      <div class="card" id="registro">
-        <div class="card-head">
-          <div>
-            <span class="eyebrow">Formulario de registro</span>
-            <h3>Solicita acceso</h3>
-          </div>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="pill">Copy Trading · XAUUSD · Automatización</span>
 
-          <span class="status">Disponible 24/7</span>
+        <h2>Conecta tu cuenta y copia operaciones automáticamente</h2>
+
+        <p>
+          Sistema profesional de copy trading para XAUUSD con ejecución automatizada,
+          gestión optimizada y soporte personalizado vía WhatsApp.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="https://wa.me/573108558080" target="_blank" rel="noreferrer">
+            Ir a WhatsApp
+          </a>
+
+          <a class="btn btn-secondary" href="#registro">
+            Solicitar acceso
+          </a>
         </div>
 
-        <form class="form">
-          <div class="grid-2">
-            <label>
-              <span>Nombre completo</span>
-              <input type="text" placeholder="Tu nombre" required />
-            </label>
+        <div class="mini-grid">
+          <article>
+            <h3>Ejecución automática</h3>
+            <p>Las operaciones se copian directamente en tu cuenta.</p>
+          </article>
 
-            <label>
-              <span>WhatsApp</span>
-              <input type="text" placeholder="573108558080" required />
-            </label>
-          </div>
+          <article>
+            <h3>Gestión optimizada</h3>
+            <p>Configuración enfocada en estabilidad y control de riesgo.</p>
+          </article>
 
-          <div class="grid-2">
-            <label>
-              <span>Correo electrónico</span>
-              <input type="email" placeholder="correo@ejemplo.com" required />
-            </label>
-
-            <label>
-              <span>Capital disponible</span>
-              <input type="text" placeholder="$100, $500..." />
-            </label>
-          </div>
-
-          <label>
-            <span>Mensaje</span>
-            <textarea rows="4" placeholder="Cuéntanos qué buscas..."></textarea>
-          </label>
-
-          <button class="btn btn-primary btn-block" type="submit">
-            Registrarme ahora
-          </button>
-
-          <p class="form-note">
-            Completa el formulario y recibe acceso a la copiadora automática.
-          </p>
-        </form>
+          <article>
+            <h3>Soporte directo</h3>
+            <p>Atención personalizada vía WhatsApp para clientes activos.</p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
 
-<script src="script.js"></script>
+      <div class="hero-card">
+        <img
+          class="bot-image"
+          src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1200&q=80"
+          alt="Copy trading automatizado"
+        />
+
+        <div class="card" id="registro">
+          <div class="card-head">
+            <div>
+              <span class="eyebrow">Formulario de registro</span>
+              <h3>Solicita acceso</h3>
+            </div>
+            <span class="status">Disponible 24/7</span>
+          </div>
+
+          <form id="leadForm" class="form">
+            <div class="grid-2">
+              <label>
+                <span>Nombre completo</span>
+                <input name="nombre" type="text" placeholder="Tu nombre" required />
+              </label>
+              <label>
+                <span>WhatsApp</span>
+                <input name="whatsapp" type="tel" placeholder="Ej. 573108558080" required />
+              </label>
+            </div>
+
+            <div class="grid-2">
+              <label>
+                <span>Correo electrónico</span>
+                <input name="email" type="email" placeholder="correo@ejemplo.com" required />
+              </label>
+              <label>
+                <span>Capital disponible</span>
+                <input name="capital" type="text" placeholder="$100, $500, etc." />
+              </label>
+            </div>
+
+            <label>
+              <span>Mensaje</span>
+              <textarea name="mensaje" rows="4" placeholder="Cuéntanos qué buscas..."></textarea>
+            </label>
+
+            <button class="btn btn-primary btn-block" type="submit">Registrarme ahora</button>
+            <p class="form-note">Completa el formulario y recibe acceso a la copiadora automática.</p>
+          </form>
+
+          <div class="success" id="successBox" hidden>
+            <div class="success-badge">✓</div>
+            <h3>Registro recibido</h3>
+            <p>Ya quedó listo para notificarte por correo y abrir WhatsApp con el mensaje preparado.</p>
+            <a class="btn btn-secondary" href="https://wa.me/573108558080" target="_blank" rel="noreferrer">
+              Abrir WhatsApp
+            </a>
+          </div>
+
+          <div class="error" id="errorBox" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="section-head">
+        <span class="pill">Confianza de clientes</span>
+        <h2>Testimonios simulados</h2>
+        <p>Sección de ejemplo para mostrar cómo podría verse la prueba social de tu copiadora.</p>
+      </div>
+
+      <div class="testimonial-grid">
+        <article class="testimonial-card">
+          <img
+            class="testimonial-avatar"
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            alt="Cliente satisfecho"
+          />
+          <div class="stars">★★★★★</div>
+          <p>
+            “La conexión fue rápida y las operaciones se copiaron automáticamente.
+            Muy buena atención por WhatsApp.”
+          </p>
+          <strong>— Carlos M.</strong>
+        </article>
+
+        <article class="testimonial-card">
+          <img
+            class="testimonial-avatar"
+            src="https://randomuser.me/api/portraits/men/45.jpg"
+            alt="Cliente satisfecho"
+          />
+          <div class="stars">★★★★★</div>
+          <p>
+            “Me gustó la estabilidad de la copiadora y la facilidad para empezar.
+            El soporte responde rápido.”
+          </p>
+          <strong>— Andrés R.</strong>
+        </article>
+
+        <article class="testimonial-card">
+          <img
+            class="testimonial-avatar"
+            src="https://randomuser.me/api/portraits/women/28.jpg"
+            alt="Cliente satisfecho"
+          />
+          <div class="stars">★★★★★</div>
+          <p>
+            “La plataforma se ve profesional y el proceso de registro fue sencillo.
+            Recomendado para XAUUSD.”
+          </p>
+          <strong>— Valentina P.</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="info">
+      <article>
+        <h3>Cómo funciona</h3>
+        <ol>
+          <li>El cliente solicita acceso por WhatsApp o formulario.</li>
+          <li>Se conecta la cuenta a la copiadora automatizada.</li>
+          <li>La cuenta empieza a replicar operaciones automáticamente.</li>
+        </ol>
+      </article>
+
+      <article>
+        <h3>Prueba social</h3>
+        <p>Una estructura pensada para que el cliente sienta confianza desde el primer vistazo.</p>
+        <div class="stars">★★★★★</div>
+        <blockquote>“La plataforma se ve profesional y hace fácil entender el servicio.”</blockquote>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Copiadora XAU · Plataforma de publicidad y registro</p>
+    <p>Lista para publicar en Vercel.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
