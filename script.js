@@ -1,42 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
-
   const form = document.querySelector("form");
-
   if (!form) return;
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const data = {
-      nombre: form.querySelector('input[name="nombre"]')?.value || "",
-      whatsapp: form.querySelector('input[name="whatsapp"]')?.value || "",
-      email: form.querySelector('input[name="email"]')?.value || "",
-      capital: form.querySelector('input[name="capital"]')?.value || "",
-      mensaje: form.querySelector('textarea[name="mensaje"]')?.value || ""
-    };
+    const formData = new FormData(form);
+    formData.append("_captcha", "false");
+    formData.append("_template", "table");
+    formData.append("_subject", "Nuevo registro desde la web");
 
     try {
-
       const response = await fetch("https://formsubmit.co/ajax/copiadoraxau@gmail.com", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify(data)
+        body: formData
       });
 
-      if (response.ok) {
-        alert("Registro enviado correctamente");
-        form.reset();
-      } else {
-        alert("Error enviando formulario");
+      if (!response.ok) {
+        throw new Error("Respuesta no exitosa");
       }
 
+      alert("Registro enviado correctamente");
+      form.reset();
     } catch (error) {
       alert("Error de conexión");
+      console.error(error);
     }
-
   });
-
 });
