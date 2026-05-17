@@ -17,6 +17,10 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:'Inter',sans-serif;
 background:#020817;
@@ -27,12 +31,12 @@ overflow-x:hidden;
 body::before{
 content:'';
 position:fixed;
-width:100%;
-height:100%;
+inset:0;
 background:
-radial-gradient(circle at top left,#3b2a0033,transparent 35%),
-radial-gradient(circle at bottom right,#ffc40022,transparent 30%);
+radial-gradient(circle at top left,#002b5533,transparent 35%),
+radial-gradient(circle at bottom right,#0066ff22,transparent 30%);
 z-index:-1;
+pointer-events:none;
 }
 
 .container{
@@ -51,8 +55,11 @@ min-height:100vh;
 
 .hero-image{
 width:100%;
+height:auto;
+aspect-ratio:16/9;
+object-fit:cover;
 border-radius:24px;
-box-shadow:0 0 45px rgba(255,196,0,.30);
+box-shadow:0 0 45px rgba(0,102,255,.35);
 display:block;
 }
 
@@ -65,7 +72,7 @@ margin-bottom:25px;
 }
 
 .hero h1 span{
-color:#ffc400;
+color:#1d7cff;
 }
 
 .hero p{
@@ -96,9 +103,9 @@ justify-content:center;
 }
 
 .btn-primary{
-background:#ffc400;
-color:#020817;
-box-shadow:0 0 20px rgba(255,196,0,.35);
+background:#1d7cff;
+color:white;
+box-shadow:0 0 20px rgba(0,102,255,.35);
 }
 
 .btn-primary:hover{
@@ -106,13 +113,13 @@ transform:translateY(-3px);
 }
 
 .btn-outline{
-border:2px solid #ffc400;
+border:2px solid #1d7cff;
 color:white;
 }
 
 .btn-outline:hover{
-background:#ffc400;
-color:#020817;
+background:#1d7cff;
+color:white;
 }
 
 .features{
@@ -133,7 +140,7 @@ border:1px solid #11203d;
 .feature h4{
 margin-top:10px;
 font-size:20px;
-color:#ffc400;
+color:#1d7cff;
 }
 
 .feature p{
@@ -196,8 +203,8 @@ width:100%;
 padding:20px;
 border:none;
 border-radius:16px;
-background:#ffc400;
-color:#020817;
+background:#1d7cff;
+color:white;
 font-size:22px;
 font-weight:700;
 cursor:pointer;
@@ -208,13 +215,6 @@ transition:.3s;
 transform:translateY(-3px);
 }
 
-.secure{
-text-align:center;
-margin-top:20px;
-color:#ffc400;
-font-size:15px;
-}
-
 .profits{
 padding:120px 0 80px;
 }
@@ -223,7 +223,7 @@ padding:120px 0 80px;
 .testimonials small{
 display:block;
 text-align:center;
-color:#ffc400;
+color:#1d7cff;
 font-size:18px;
 margin-bottom:10px;
 font-weight:700;
@@ -271,7 +271,7 @@ font-size:18px;
 
 .profits-table th{
 background:#08152b;
-color:#ffc400;
+color:#1d7cff;
 }
 
 .profits-table td{
@@ -305,7 +305,7 @@ border:1px solid #13284d;
 
 .quote{
 font-size:70px;
-color:#ffc400;
+color:#1d7cff;
 line-height:1;
 }
 
@@ -318,7 +318,7 @@ line-height:1.7;
 
 .stars{
 margin-top:20px;
-color:#ffc400;
+color:#1d7cff;
 font-size:22px;
 }
 
@@ -452,8 +452,8 @@ font-size:18px;
 
 <img
 class="hero-image"
-src="bot p.png"
-alt="Bot de oro XAUUSD"
+src="a_wide_cinematic_futuristic_tech_finance_scene_i.png"
+alt="Bot XAUUSD"
 >
 
 <h1>
@@ -462,11 +462,11 @@ Conecta tu cuenta y copia operaciones
 </h1>
 
 <p>
-Sistema profesional de copy trading para XAUUSD con ejecución automatizada, gestión optimizada y soporte personalizado vía WhatsApp.
+Sistema profesional de copy trading para XAUUSD con ejecución automatizada,
+gestión optimizada y soporte personalizado vía WhatsApp.
 </p>
 
 <div class="buttons">
-
 <a
 href="https://wa.me/573108558080"
 target="_blank"
@@ -481,7 +481,6 @@ class="btn btn-outline"
 >
 Solicitar acceso
 </a>
-
 </div>
 
 <div class="features">
@@ -493,17 +492,17 @@ Solicitar acceso
 
 <div class="feature">
 <h4>🛡️ Seguridad</h4>
-<p>Tus fondos seguros</p>
+<p>Protección profesional</p>
 </div>
 
 <div class="feature">
 <h4>📈 Rendimiento</h4>
-<p>Objetivo del 3% diario</p>
+<p>Resultados optimizados</p>
 </div>
 
 <div class="feature">
 <h4>🎧 Soporte</h4>
-<p>Asesoría personalizada</p>
+<p>Atención personalizada</p>
 </div>
 
 </div>
@@ -548,10 +547,6 @@ Completa tus datos y nos pondremos en contacto contigo por WhatsApp.
 <button class="submit-btn" type="submit">
 Registrarme ahora
 </button>
-
-<div class="secure">
-🔒 Tus datos están 100% seguros.
-</div>
 
 </form>
 
@@ -622,7 +617,7 @@ Desde que conecté mi cuenta al sistema, las operaciones son totalmente automát
 
 <div class="user-left">
 
-<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos M.">
 
 <div>
 <h4>Carlos M.</h4>
@@ -656,7 +651,7 @@ El sistema opera automáticamente y yo solo reviso los resultados. Muy profesion
 
 <div class="user-left">
 
-<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Laura G.">
 
 <div>
 <h4>Laura G.</h4>
@@ -690,7 +685,7 @@ Tenía dudas al principio, pero el rendimiento y la gestión del riesgo me diero
 
 <div class="user-left">
 
-<img src="https://randomuser.me/api/portraits/men/41.jpg">
+<img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Andrés P.">
 
 <div>
 <h4>Andrés P.</h4>
@@ -713,13 +708,13 @@ Tenía dudas al principio, pero el rendimiento y la gestión del riesgo me diero
 </section>
 
 <div class="footer">
-© 2024 Copy Trading XAUUSD. Todos los derechos reservados.
+© 2026 Copy Trading XAUUSD. Todos los derechos reservados.
 </div>
 
 </div>
 
 <a
-href="https://wa.me/573043031358"
+href="https://wa.me/573108558080"
 target="_blank"
 class="whatsapp-float"
 >
@@ -810,13 +805,11 @@ const { error } =
 await supabase
 .from('registros')
 .insert([{
-
 nombre,
 whatsapp,
 email,
 capital,
 mensaje
-
 }])
 
 if(error){
@@ -828,7 +821,6 @@ console.log(error)
 
 const texto =
 encodeURIComponent(
-
 `Hola, quiero información.
 
 Nombre: ${nombre}
@@ -836,7 +828,6 @@ WhatsApp: ${whatsapp}
 Correo: ${email}
 Capital: ${capital}
 Mensaje: ${mensaje}`
-
 )
 
 window.open(
@@ -845,7 +836,6 @@ window.open(
 )
 
 alert('Registro enviado correctamente')
-
 form.reset()
 
 }
@@ -853,6 +843,7 @@ form.reset()
 }catch(err){
 
 alert('Error del servidor')
+console.log(err)
 
 }
 
