@@ -1,58 +1,59 @@
-import { useState } from "react";
+const form = document.getElementById("registroForm");
 
-export default function Registro() {
-  const [form, setForm] = useState({
-    nombre: "",
-    whatsapp: "",
-    email: "",
-    capital: "",
-    mensaje: "",
-  });
+form.addEventListener("submit", async function (e) {
 
-  const [loading, setLoading] = useState(false);
+  e.preventDefault();
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+  const data = {
+    nombre: document.getElementById("nombre").value.trim(),
+    whatsapp: document.getElementById("whatsapp").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    capital: document.getElementById("capital").value.trim(),
+    mensaje: document.getElementById("mensaje").value.trim()
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+  try {
 
-    const res = await fetch("/api/registro", {
+    const response = await fetch("/api/registro", {
+
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
+
+      headers: {
+        "Content-Type": "application/json"
+      },
+
+      body: JSON.stringify(data)
+
     });
 
-    const data = await res.json();
-    setLoading(false);
+    const result = await response.json();
 
-    if (data.ok) {
-      alert("Registro enviado correctamente");
-      setForm({
-        nombre: "",
-        whatsapp: "",
-        email: "",
-        capital: "",
-        mensaje: "",
-      });
-    } else {
-      alert("Error al enviar el registro");
+    if (!result.ok) {
+
+      alert("No se pudo guardar el registro");
+      return;
+
     }
-  };
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <input name="nombre" placeholder="Nombre completo" value={form.nombre} onChange={handleChange} required />
-      <input name="whatsapp" placeholder="WhatsApp" value={form.whatsapp} onChange={handleChange} required />
-      <input name="email" type="email" placeholder="Correo electrónico" value={form.email} onChange={handleChange} required />
-      <input name="capital" placeholder="Capital disponible" value={form.capital} onChange={handleChange} required />
-      <textarea name="mensaje" placeholder="Mensaje" value={form.mensaje} onChange={handleChange} />
+    const texto = encodeURIComponent(
 
-      <button type="submit" disabled={loading}>
-        {loading ? "Enviando..." : "Registrarme ahora"}
-      </button>
-    </form>
-  );
-}
+      `Hola, me registré en la página.\n\n` +
+
+      `Nombre: ${data.nombre}\n` +
+      `WhatsApp: ${data.whatsapp}\n` +
+      `Correo: ${data.email}\n` +
+      `Capital: ${data.capital}\n` +
+      `Mensaje: ${data.mensaje || "Sin mensaje"}`
+
+    );
+
+    window.location.href =
+      `https://wa.me/573108558080?text=${texto}`;
+
+  } catch (error) {
+
+    alert("Error del servidor");
+
+  }
+
+});
