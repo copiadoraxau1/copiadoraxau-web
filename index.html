@@ -1,90 +1,100 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Copiadora XAU</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
 
-<a class="whatsapp-float" href="https://wa.me/573108558080" target="_blank">WhatsApp</a>
+  <a class="whatsapp-float"
+     href="https://wa.me/573108558080"
+     target="_blank">
+     WhatsApp
+  </a>
 
-<section class="hero">
-  <div class="hero-left">
-    <span class="tag">Copy Trading · XAUUSD · Automatización</span>
-    <h1>Conecta tu cuenta y copia operaciones automáticamente</h1>
-    <p>
-      Sistema profesional de copy trading para XAUUSD con ejecución automatizada,
-      gestión optimizada y soporte personalizado vía WhatsApp.
-    </p>
+  <section class="hero">
 
-    <div class="buttons">
-      <a class="btn-primary" href="https://wa.me/573108558080" target="_blank">
-        Ir a WhatsApp
-      </a>
+    <div class="hero-left">
+      <span class="tag">
+        Copy Trading • XAUUSD • Automatización
+      </span>
 
-      <a class="btn-secondary" href="#registro">
-        Solicitar acceso
-      </a>
+      <h1>
+        Conecta tu cuenta y copia operaciones automáticamente
+      </h1>
+
+      <p>
+        Sistema profesional de copy trading para XAUUSD con ejecución automatizada,
+        gestión optimizada y soporte personalizado vía WhatsApp.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="https://wa.me/573108558080" target="_blank" class="btn-primary">
+          Ir a WhatsApp
+        </a>
+
+        <a href="#registro" class="btn-secondary">
+          Solicitar acceso
+        </a>
+      </div>
     </div>
-  </div>
 
-  <div class="hero-right">
-    <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1200&q=80">
+    <div class="hero-right">
 
-    <div class="form-box" id="registro">
-      <h2>Formulario de registro</h2>
+      <img
+        src="https://images.unsplash.com/photo-1642104704074-907c0698cbd9?q=80&w=1200&auto=format&fit=crop"
+        alt="Trading Bot">
 
-      <form>
-        <input type="text" placeholder="Nombre completo">
-        <input type="text" placeholder="WhatsApp">
-        <input type="email" placeholder="Correo electrónico">
-        <input type="text" placeholder="Capital disponible">
-        <textarea placeholder="Mensaje"></textarea>
+      <form id="registro-form">
 
-        <button type="submit">Registrarme ahora</button>
+        <h2>Formulario de registro</h2>
+
+        <input
+          type="text"
+          name="nombre"
+          placeholder="Nombre"
+          required>
+
+        <input
+          type="text"
+          name="whatsapp"
+          placeholder="WhatsApp"
+          required>
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Correo electrónico"
+          required>
+
+        <input
+          type="text"
+          name="capital"
+          placeholder="Capital inicial"
+          required>
+
+        <textarea
+          name="mensaje"
+          placeholder="Mensaje"
+          required></textarea>
+
+        <button type="submit">
+          Registrarme ahora
+        </button>
+
       </form>
-    </div>
-  </div>
-</section>
 
-<section class="testimonials">
-  <h2>Testimonios</h2>
-
-  <div class="testimonial-grid">
-
-    <div class="testimonial-card">
-      <img src="https://randomuser.me/api/portraits/men/32.jpg">
-      <h3>Carlos M.</h3>
-      <div class="stars">★★★★★</div>
-      <p>
-        Excelente servicio, la conexión fue muy fácil y los resultados han sido increíbles.
-      </p>
     </div>
 
-    <div class="testimonial-card">
-      <img src="https://randomuser.me/api/portraits/women/28.jpg">
-      <h3>Laura G.</h3>
-      <div class="stars">★★★★★</div>
-      <p>
-        Todo es automático y muy confiable. El soporte responde rápido.
-      </p>
-    </div>
+  </section>
 
-    <div class="testimonial-card">
-      <img src="https://randomuser.me/api/portraits/men/45.jpg">
-      <h3>Andrés R.</h3>
-      <div class="stars">★★★★★</div>
-      <p>
-        La mejor decisión que tomé este año para automatizar operaciones.
-      </p>
-    </div>
+  <script src="script.js"></script>
 
-  </div>
-</section>
-
-<script src="script.js"></script>
 </body>
+
 </html>
