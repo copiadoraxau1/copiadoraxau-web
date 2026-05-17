@@ -303,6 +303,7 @@ font-weight:700;
 font-size:22px;
 text-decoration:none;
 z-index:999;
+box-shadow:0 0 25px rgba(37,211,102,.35);
 }
 
 @media(max-width:1100px){
@@ -317,6 +318,14 @@ grid-template-columns:1fr 1fr;
 
 .hero h1{
 font-size:52px;
+}
+
+.form-box h2{
+font-size:42px;
+}
+
+.profits h2{
+font-size:42px;
 }
 
 }
@@ -339,8 +348,16 @@ font-size:18px;
 padding:25px;
 }
 
+.form-box h2{
+font-size:34px;
+}
+
 .profits h2{
 font-size:34px;
+}
+
+.profits p{
+font-size:18px;
 }
 
 }
@@ -367,7 +384,7 @@ Conecta tu cuenta y copia operaciones
 </h1>
 
 <p>
-Sistema profesional de copy trading para XAUUSD con gestión automatizada y soporte vía WhatsApp.
+Sistema profesional de copy trading para XAUUSD con ejecución automatizada, gestión optimizada y soporte personalizado vía WhatsApp.
 </p>
 
 <div class="buttons">
@@ -403,7 +420,7 @@ Solicitar acceso
 
 <div class="feature">
 <h4>📈 Resultados</h4>
-<p>Estrategias optimizadas</p>
+<p>Estrategias probadas</p>
 </div>
 
 <div class="feature">
@@ -420,34 +437,34 @@ Solicitar acceso
 <h2>Formulario de registro</h2>
 
 <p>
-Completa tus datos y nos pondremos en contacto contigo.
+Completa tus datos y nos pondremos en contacto contigo por WhatsApp.
 </p>
 
 <form id="registroForm">
 
 <div class="form-group">
 <label>Nombre completo</label>
-<input type="text" id="nombre" required>
+<input type="text" id="nombre" placeholder="Ingresa tu nombre completo" required>
 </div>
 
 <div class="form-group">
 <label>WhatsApp</label>
-<input type="text" id="whatsapp" required>
+<input type="text" id="whatsapp" placeholder="Ej: 310 855 8080" required>
 </div>
 
 <div class="form-group">
 <label>Correo electrónico</label>
-<input type="email" id="email" required>
+<input type="email" id="email" placeholder="ejemplo@correo.com" required>
 </div>
 
 <div class="form-group">
 <label>Capital disponible</label>
-<input type="text" id="capital" required>
+<input type="text" id="capital" placeholder="Ej: 500 USD" required>
 </div>
 
 <div class="form-group">
-<label>Mensaje</label>
-<textarea id="mensaje"></textarea>
+<label>Mensaje (opcional)</label>
+<textarea id="mensaje" placeholder="Cuéntanos algo más..."></textarea>
 </div>
 
 <button class="submit-btn" type="submit">
@@ -455,7 +472,7 @@ Registrarme ahora
 </button>
 
 <div class="secure">
-🔒 Tus datos están seguros.
+🔒 Tus datos están 100% seguros.
 </div>
 
 </form>
@@ -471,7 +488,7 @@ Registrarme ahora
 <h2>Sistema automático de rendimiento</h2>
 
 <p>
-El sistema calcula automáticamente una estimación del 3% según el capital del cliente.
+El sistema calcula automáticamente una estimación aproximada del 3% diario según el capital del cliente.
 </p>
 
 <div class="profits-table-wrap">
@@ -481,7 +498,7 @@ El sistema calcula automáticamente una estimación del 3% según el capital del
 <thead>
 <tr>
 <th>Capital</th>
-<th>Ganancia estimada 3%</th>
+<th>Ganancia diaria estimada 3%</th>
 <th>Total aproximado</th>
 </tr>
 </thead>
