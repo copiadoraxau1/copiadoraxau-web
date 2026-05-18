@@ -814,35 +814,37 @@ Mensaje: ${mensaje}`
 
 
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form");
-  if (!form) return;
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const nombre = form.querySelector('[name="nombre"]')?.value || "";
-    const whatsapp = form.querySelector('[name="whatsapp"]')?.value || "";
-    const email = form.querySelector('[name="email"]')?.value || "";
-    const capital = form.querySelector('[name="capital"]')?.value || "";
-    const mensaje = form.querySelector('[name="mensaje"]')?.value || "";
-
-    const texto = encodeURIComponent(
-      `Hola, quiero información.\n\nNombre: ${nombre}\nWhatsApp: ${whatsapp}\nCorreo: ${email}\nCapital: ${capital}\nMensaje: ${mensaje}`
-    );
-
-    const url = "https://wa.me/573043031358?text=" + texto;
-    window.location.href = url;
-  });
-});
-</script>
 
 boton.innerHTML='Registrarme ahora'
 boton.disabled=false
 
 })
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const campos = form.querySelectorAll("input, textarea");
+    const valores = Array.from(campos).map(campo => (campo.value || "").trim());
+
+    const nombre = valores[0] || "";
+    const whatsapp = valores[1] || "";
+    const email = valores[2] || "";
+    const capital = valores[3] || "";
+    const mensaje = valores[4] || "";
+
+    const texto = encodeURIComponent(
+      `Hola, quiero información.\n\nNombre: ${nombre}\nWhatsApp: ${whatsapp}\nCorreo: ${email}\nCapital: ${capital}\nMensaje: ${mensaje}`
+    );
+
+    window.location.href = "https://wa.me/573043031358?text=" + texto;
+  });
+});
 </script>
 
 </body>
