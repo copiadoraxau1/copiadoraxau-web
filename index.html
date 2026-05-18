@@ -701,152 +701,27 @@ class="whatsapp-float"
 >
 WhatsApp
 </a>
-
-<script type="module">
-
-import { createClient }
-from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
-
-const supabaseUrl =
-'https://ztaxgmkogmtwitojqtbb.supabase.co'
-
-const supabaseKey =
-'sb_publishable_GAozYed301UoG9qg_sHrzg_LCSNBIkI'
-
-const supabase =
-createClient(supabaseUrl,supabaseKey)
-
-const capitales = [
-100,
-200,
-300,
-500,
-1000,
-1500,
-2000,
-3000,
-5000,
-10000
-]
-
-const tabla =
-document.getElementById('tablaGanancias')
-
-capitales.forEach(capital=>{
-
-const ganancia =
-capital * 0.03
-
-const total =
-capital + ganancia
-
-tabla.innerHTML += `
-<tr>
-<td>$${capital.toLocaleString()}</td>
-<td>$${ganancia.toFixed(2)}</td>
-<td>$${total.toFixed(2)}</td>
-</tr>
-`
-
-})
-
-const form =
-document.getElementById('registroForm')
-
-form.addEventListener(
-'submit',
-async(e)=>{
-
-e.preventDefault()
-
-const nombre =
-document.getElementById('nombre').value
-
-const whatsapp =
-document.getElementById('whatsapp').value
-
-const email =
-document.getElementById('email').value
-
-const capital =
-document.getElementById('capital').value
-
-const mensaje =
-document.getElementById('mensaje').value
-
-const boton =
-document.querySelector('.submit-btn')
-
-boton.innerHTML='Enviando...'
-boton.disabled=true
-
-try{
-
-const { error } =
-await supabase
-.from('registros')
-.insert([{
-nombre,
-whatsapp,
-email,
-capital,
-mensaje
-}])
-
-if(error){
-
-alert('No se pudo guardar el registro')
-console.log(error)
-
-}else{
-
- texto =
-encodeconstURIComponent(
-`Hola, quiero información.
-
-Nombre: ${nombre}
-WhatsApp: ${whatsapp}
-Correo: ${email}
-Capital: ${capital}
-Mensaje: ${mensaje}`
-)
-
-
-
-
-
-
-boton.innerHTML='Registrarme ahora'
-boton.disabled=false
-
-})
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+document.getElementById("registroForm").onsubmit = function(e){
 
-  const form = document.getElementById("registroForm");
+  e.preventDefault();
 
-  if (!form) return;
+  const nombre =
+    document.getElementById("nombre").value;
 
-  form.addEventListener("submit", function (e) {
+  const whatsapp =
+    document.getElementById("whatsapp").value;
 
-    e.preventDefault();
+  const email =
+    document.getElementById("email").value;
 
-    const nombre =
-      document.getElementById("nombre")?.value || "";
+  const capital =
+    document.getElementById("capital").value;
 
-    const whatsapp =
-      document.getElementById("whatsapp")?.value || "";
+  const mensaje =
+    document.getElementById("mensaje").value;
 
-    const email =
-      document.getElementById("email")?.value || "";
-
-    const capital =
-      document.getElementById("capital")?.value || "";
-
-    const mensaje =
-      document.getElementById("mensaje")?.value || "";
-
-    const texto = encodeURIComponent(
+  const texto = encodeURIComponent(
 `Hola, quiero información.
 
 Nombre: ${nombre}
@@ -854,14 +729,12 @@ WhatsApp: ${whatsapp}
 Correo: ${email}
 Capital: ${capital}
 Mensaje: ${mensaje}`
-    );
+  );
 
-    window.location.href =
-      "https://wa.me/573043031358?text=" + texto;
+  location.href =
+  "https://wa.me/573043031358?text=" + texto;
 
-  });
-
-});
+};
 </script>
 
 </body>
