@@ -815,20 +815,26 @@ Mensaje: ${mensaje}`
 
 
 <script>
-document.querySelector("form").addEventListener("submit", function(e) {
-  e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
+  if (!form) return;
 
-  const nombre = document.querySelector('input[name="nombre"]').value;
-  const whatsapp = document.querySelector('input[name="whatsapp"]').value;
-  const email = document.querySelector('input[name="email"]').value;
-  const capital = document.querySelector('input[name="capital"]').value;
-  const mensaje = document.querySelector('textarea[name="mensaje"]').value;
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  const texto = encodeURIComponent(
-    `Hola, quiero información.\n\nNombre: ${nombre}\nWhatsApp: ${whatsapp}\nCorreo: ${email}\nCapital: ${capital}\nMensaje: ${mensaje}`
-  );
+    const nombre = form.querySelector('[name="nombre"]')?.value || "";
+    const whatsapp = form.querySelector('[name="whatsapp"]')?.value || "";
+    const email = form.querySelector('[name="email"]')?.value || "";
+    const capital = form.querySelector('[name="capital"]')?.value || "";
+    const mensaje = form.querySelector('[name="mensaje"]')?.value || "";
 
-  window.open("https://wa.me/573043031358?text=" + texto, "_blank");
+    const texto = encodeURIComponent(
+      `Hola, quiero información.\n\nNombre: ${nombre}\nWhatsApp: ${whatsapp}\nCorreo: ${email}\nCapital: ${capital}\nMensaje: ${mensaje}`
+    );
+
+    const url = "https://wa.me/573043031358?text=" + texto;
+    window.location.href = url;
+  });
 });
 </script>
 
