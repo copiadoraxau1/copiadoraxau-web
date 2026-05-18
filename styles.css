@@ -122,3 +122,19 @@ button {
     font-size: 38px;
   }
 }
+
+
+.btn-telegram{
+  background:#0088cc;
+  color:white;
+  border:none;
+}
+
+.btn-telegram:hover{
+  background:#00a2ff;
+}
+
+
+
+
+
