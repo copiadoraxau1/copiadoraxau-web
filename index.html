@@ -820,30 +820,47 @@ boton.innerHTML='Registrarme ahora'
 boton.disabled=false
 
 })
-
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector("form");
+
+  const form = document.getElementById("registroForm");
+
   if (!form) return;
 
   form.addEventListener("submit", function (e) {
+
     e.preventDefault();
 
-    const campos = form.querySelectorAll("input, textarea");
-    const valores = Array.from(campos).map(campo => (campo.value || "").trim());
+    const nombre =
+      document.getElementById("nombre")?.value || "";
 
-    const nombre = valores[0] || "";
-    const whatsapp = valores[1] || "";
-    const email = valores[2] || "";
-    const capital = valores[3] || "";
-    const mensaje = valores[4] || "";
+    const whatsapp =
+      document.getElementById("whatsapp")?.value || "";
+
+    const email =
+      document.getElementById("email")?.value || "";
+
+    const capital =
+      document.getElementById("capital")?.value || "";
+
+    const mensaje =
+      document.getElementById("mensaje")?.value || "";
 
     const texto = encodeURIComponent(
-      `Hola, quiero información.\n\nNombre: ${nombre}\nWhatsApp: ${whatsapp}\nCorreo: ${email}\nCapital: ${capital}\nMensaje: ${mensaje}`
+`Hola, quiero información.
+
+Nombre: ${nombre}
+WhatsApp: ${whatsapp}
+Correo: ${email}
+Capital: ${capital}
+Mensaje: ${mensaje}`
     );
 
-    window.location.href = "https://wa.me/573043031358?text=" + texto;
+    window.location.href =
+      "https://wa.me/573043031358?text=" + texto;
+
   });
+
 });
 </script>
 
