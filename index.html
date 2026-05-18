@@ -785,17 +785,23 @@ Mensaje: ${mensaje}`
 
 
 
-alert('Registro enviado correctamente')
-form.reset()
+<script>
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-}
+  const nombre = document.querySelector('input[name="nombre"]').value;
+  const whatsapp = document.querySelector('input[name="whatsapp"]').value;
+  const email = document.querySelector('input[name="email"]').value;
+  const capital = document.querySelector('input[name="capital"]').value;
+  const mensaje = document.querySelector('textarea[name="mensaje"]').value;
 
-}catch(err){
+  const texto = encodeURIComponent(
+    `Hola, quiero información.\n\nNombre: ${nombre}\nWhatsApp: ${whatsapp}\nCorreo: ${email}\nCapital: ${capital}\nMensaje: ${mensaje}`
+  );
 
-alert('Error del servidor')
-console.log(err)
-
-}
+  window.open("https://wa.me/573043031358?text=" + texto, "_blank");
+});
+</script>
 
 boton.innerHTML='Registrarme ahora'
 boton.disabled=false
